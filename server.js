@@ -55,8 +55,8 @@ app.get('/', (req, res) => {
   const user = req.oidc.user;
 
   console.log('Is Authenticated:', isAuthenticated);
-  console.log('User:', user);
-  console.log('OIDC', req.oidc);
+  // console.log('User:', user);
+  // console.log('OIDC', req.oidc);
 
   res.send(isAuthenticated ? 'Logged in' : 'Logged out');
 });

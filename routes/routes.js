@@ -18,8 +18,6 @@ router.use(authorizer);
 
 // GET /books - Retrieve all books
 router.get('/', requiresAuth(), (req, res, next) => {
-  console.log(req.oidc); // Check if req.oidc exists
-
   controller.getAllBooks(req, res)
     .catch(next);
 });
